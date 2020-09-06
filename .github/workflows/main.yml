@@ -1,4 +1,4 @@
-name: CI
+name: build and deploy
 on:
   push:
     branches:
@@ -11,7 +11,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        os: [macos-latest, windows-latest, ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
     - name: Checkout
@@ -25,12 +25,8 @@ jobs:
       uses: GabrielBB/xvfb-action@v1.2
       with:
         run: npm test
-    - name: debug githubRef
-      run: echo ${{github.ref}}
-    - name: debug matrixos
-      run: echo ${{matrix.os}}
     - name: Publish
-      if: success() && startsWith( github.ref, 'refs/tags/releases/') && matrix.os == 'ubuntu-latest'
+      if: success() && startsWith( github.ref, 'refs/tags/v') && matrix.os == 'ubuntu-latest'
       run: npm run deploy
       env:
         VSCE_PAT: ${{ secrets.VSCE_PAT }}

@@ -1,3 +1,4 @@
-![CI](https://github.com/facundoleites/react-intl-helper/workflows/CI/badge.svg?branch=master)
+[![Actions Status](https://github.com/facundoleites/react-intl-helper/workflows/build%20and%20deploy/badge.svg)](https://github.com/facundoleites/react-intl-helper/actions)
+
 # react-intl-helper 
 pre-alpha build test
