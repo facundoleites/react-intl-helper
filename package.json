@@ -3,7 +3,7 @@
 	"displayName": "React Intl Helper",
 	"description": "an tool for organizing react-intl json lang files",
 	"version": "0.0.4",
-	"icon":"./resources/react-intl-helper-logo.png",
+	"icon":"resources/react-intl-helper-logo.png",
 	"publisher": "facundoleites",
 	"homepage": "https://github.com/facundoleites/react-intl-helper/blob/master/README.md",
 	"bugs": {
