@@ -2,7 +2,8 @@
 	"name": "react-intl-helper",
 	"displayName": "React Intl Helper",
 	"description": "an tool for organizing react-intl json lang files",
-	"version": "0.0.1",
+	"version": "0.0.2",
+	"publisher": "facundoleites",
 	"homepage": "https://github.com/facundoleites/react-intl-helper/blob/master/README.md",
 	"bugs": {
 		"url": "https://github.com/facundoleites/react-intl-helper/issues",
