@@ -2,7 +2,8 @@
 	"name": "react-intl-helper",
 	"displayName": "React Intl Helper",
 	"description": "an tool for organizing react-intl json lang files",
-	"version": "0.0.3",
+	"version": "0.0.4",
+	"icon":"./resources/react-intl-helper-logo.png",
 	"publisher": "facundoleites",
 	"homepage": "https://github.com/facundoleites/react-intl-helper/blob/master/README.md",
 	"bugs": {
@@ -61,7 +62,11 @@
 			},
 			{
 				"command": "react-intl-helper.openPanel",
-				"title": "Open panel with the translation information"
+				"title": "Open panel with the translation information",
+				"icon": {
+					"light": "resources/translation-light.svg",
+					"dark": "resources/translation-dark.svg"
+				}
 			},
 			{
 				"command": "react-intl-helper.refresh",
