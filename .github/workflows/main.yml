@@ -25,10 +25,8 @@ jobs:
       uses: GabrielBB/xvfb-action@v1.2
       with:
         run: npm test
-    - name: debug success
-      run: echo ${{success()}}
-    - name: debug startsWith
-      run: echo ${{github.ref}} ${{startsWith( github.ref, 'refs/tags/releases/')}}
+    - name: debug githubRef
+      run: echo ${{github.ref}}
     - name: debug matrixos
       run: echo ${{matrix.os}}
     - name: Publish
