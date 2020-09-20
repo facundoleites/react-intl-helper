@@ -1,151 +1,151 @@
 {
-	"name": "react-intl-helper",
-	"displayName": "React Intl Helper",
-	"description": "an tool for organizing react-intl json lang files",
-	"version": "0.0.4",
-	"icon":"resources/react-intl-helper-logo.png",
-	"publisher": "facundoleites",
-	"homepage": "https://github.com/facundoleites/react-intl-helper/blob/master/README.md",
-	"bugs": {
-		"url": "https://github.com/facundoleites/react-intl-helper/issues",
-		"email": "hola@facundoleites.com"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/facundoleites/react-intl-helper"
-	},
-	"engines": {
-		"vscode": "^1.48.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:react-intl-helper.setLangPath",
-		"onCommand:react-intl-helper.refresh",
-		"onCommand:react-intl-helper.openPanel",
-		"onView:react-intl-helper-tree-view"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"configuration": [
-			{
-				"title": "Configuration Samples",
-				"properties": {
-					"react-intl-helper.rootPath": {
-						"type": "string",
-						"default": "lang",
-						"description": "default path for the path relative to workspace root",
-						"scope": "resource"
-					},
-					"react-intl-helper.defaultLang": {
-						"type": "string",
-						"default": "en",
-						"description": "default base lang for translations",
-						"scope": "resource"
-					}
-				}
-			}
-		],
-		"views": {
-			"explorer": [
-				{
-					"id": "react-intl-helper-tree-view",
-					"name": "translations"
-				}
-			]
-		},
-		"commands": [
-			{
-				"command": "react-intl-helper.openFile",
-				"title": "Open file"
-			},
-			{
-				"command": "react-intl-helper.openPanel",
-				"title": "Open panel with the translation information",
-				"icon": {
-					"light": "resources/translation-light.svg",
-					"dark": "resources/translation-dark.svg"
-				}
-			},
-			{
-				"command": "react-intl-helper.refresh",
-				"title": "Refresh",
-				"icon": {
-					"light": "resources/refresh-light.svg",
-					"dark": "resources/refresh-dark.svg"
-				}
-			},
-			{
-				"command": "react-intl-helper.setLangPath",
-				"title": "Set lang path",
-				"icon": {
-					"light": "resources/folder-light.svg",
-					"dark": "resources/folder-dark.svg"
-				}
-			},
-			{
-				"command": "react-intl-helper.setDefaultLang",
-				"title": "Set default lang",
-				"icon": {
-					"light": "resources/folder-light.svg",
-					"dark": "resources/folder-dark.svg"
-				}
-			}
-		],
-		"menus": {
-			"editor/title": [
-				{
-					"command": "react-intl-helper.openPanel",
-					"when": "resourceExtname == .json",
-					"group": "navigation"
-				}
-			],
-			"view/item/context": [
-				{
-					"command": "react-intl-helper.setDefaultLang",
-					"when": "view == react-intl-helper-tree-view",
-					"group": "navigation"
-				}
-			],
-			"view/title": [
-				{
-					"command": "react-intl-helper.setLangPath",
-					"when": "view == react-intl-helper-tree-view",
-					"group": "navigation"
-				},
-				{
-					"command": "react-intl-helper.refresh",
-					"when": "view == react-intl-helper-tree-view",
-					"group": "navigation"
-				}
-			]
-		}
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"lint": "eslint src --ext ts",
-		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile && npm run lint",
-		"test": "node ./out/test/runTest.js",
-		"deploy": "vsce publish --yarn"
-	},
-	"devDependencies": {
-		"@types/glob": "^7.1.3",
-		"@types/mocha": "^8.0.0",
-		"@types/node": "^14.0.27",
-		"@types/vscode": "^1.48.0",
-		"@typescript-eslint/eslint-plugin": "^3.8.0",
-		"@typescript-eslint/parser": "^3.8.0",
-		"eslint": "^7.6.0",
-		"glob": "^7.1.6",
-		"mocha": "^8.0.1",
-		"typescript": "^3.8.3",
-		"vsce": "^1.79.5",
-		"vscode-test": "^1.4.0"
-	},
-	"dependencies": {
-		"jsonc-parser": "^2.3.0"
-	}
+  "name": "react-intl-helper",
+  "displayName": "React Intl Helper",
+  "description": "an tool for organizing react-intl json lang files",
+  "version": "0.0.5",
+  "icon": "resources/react-intl-helper-logo.png",
+  "publisher": "facundoleites",
+  "homepage": "https://github.com/facundoleites/react-intl-helper/blob/master/README.md",
+  "bugs": {
+    "url": "https://github.com/facundoleites/react-intl-helper/issues",
+    "email": "hola@facundoleites.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/facundoleites/react-intl-helper"
+  },
+  "engines": {
+    "vscode": "^1.48.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:react-intl-helper.setLangPath",
+    "onCommand:react-intl-helper.refresh",
+    "onCommand:react-intl-helper.openPanel",
+    "onView:react-intl-helper-tree-view"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": [
+      {
+        "title": "Configuration Samples",
+        "properties": {
+          "react-intl-helper.rootPath": {
+            "type": "string",
+            "default": "lang",
+            "description": "default path for the path relative to workspace root",
+            "scope": "resource"
+          },
+          "react-intl-helper.defaultLang": {
+            "type": "string",
+            "default": "en",
+            "description": "default base lang for translations",
+            "scope": "resource"
+          }
+        }
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "react-intl-helper-tree-view",
+          "name": "translations"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "react-intl-helper.openFile",
+        "title": "Open file"
+      },
+      {
+        "command": "react-intl-helper.openPanel",
+        "title": "Open panel with the translation information",
+        "icon": {
+          "light": "resources/translation-light.svg",
+          "dark": "resources/translation-dark.svg"
+        }
+      },
+      {
+        "command": "react-intl-helper.refresh",
+        "title": "Refresh",
+        "icon": {
+          "light": "resources/refresh-light.svg",
+          "dark": "resources/refresh-dark.svg"
+        }
+      },
+      {
+        "command": "react-intl-helper.setLangPath",
+        "title": "Set lang path",
+        "icon": {
+          "light": "resources/folder-light.svg",
+          "dark": "resources/folder-dark.svg"
+        }
+      },
+      {
+        "command": "react-intl-helper.setDefaultLang",
+        "title": "Set default lang",
+        "icon": {
+          "light": "resources/folder-light.svg",
+          "dark": "resources/folder-dark.svg"
+        }
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "react-intl-helper.openPanel",
+          "when": "resourceExtname == .json",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "react-intl-helper.setDefaultLang",
+          "when": "view == react-intl-helper-tree-view",
+          "group": "navigation"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "react-intl-helper.setLangPath",
+          "when": "view == react-intl-helper-tree-view",
+          "group": "navigation"
+        },
+        {
+          "command": "react-intl-helper.refresh",
+          "when": "view == react-intl-helper-tree-view",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "test": "node ./out/test/runTest.js",
+    "deploy": "vsce publish --yarn"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.0",
+    "@types/node": "^14.0.27",
+    "@types/vscode": "^1.48.0",
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
+    "eslint": "^7.6.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.0.1",
+    "typescript": "^3.8.3",
+    "vsce": "^1.79.5",
+    "vscode-test": "^1.4.0"
+  },
+  "dependencies": {
+    "jsonc-parser": "^2.3.0"
+  }
 }

@@ -29,6 +29,6 @@ When you open an file the extensios will check if the language have missing tran
 ### Use the panel to view the message information
 * Open an translation file
 * Click on translation icon to open the translation panel
-* Navigate throw yours messages to see the default lang message
+* Navigate through yours messages to see the default lang message
 
 ![setting folder path and default language](resources/images/ext_panel.gif)
