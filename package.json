@@ -2,7 +2,7 @@
   "name": "react-intl-helper",
   "displayName": "React Intl Helper",
   "description": "an tool for organizing react-intl json lang files",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "icon": "resources/react-intl-helper-logo.png",
   "publisher": "facundoleites",
   "homepage": "https://github.com/facundoleites/react-intl-helper/blob/master/README.md",
@@ -146,6 +146,6 @@
     "vscode-test": "^1.4.0"
   },
   "dependencies": {
-    "jsonc-parser": "^2.3.0"
+    "jsonc-parser": "^2.3.1"
   }
 }
